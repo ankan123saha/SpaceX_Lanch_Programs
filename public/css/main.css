@@ -1,0 +1,172 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0 15px;
+  font-family: sans-serif;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 84%;
+  background: #f2f2f2;
+  margin-top: 7%;
+}
+.card_text{
+  padding: 8px;
+}
+.filter-section {
+  width: 100%;
+  margin: 0px auto 0px auto;
+}
+.filter-section .card {
+  width: 98%;
+}
+ul {
+  margin: 0;
+  color: #669;
+}
+.year_list {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.filter_title {
+  text-align: center;
+  border-bottom: 1px solid;
+  padding: 5px;
+  width: 78%;
+  margin: 8px auto;
+}
+.filter_option {
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.card-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 70%;
+}
+.card {
+  margin: 5px;
+  background: white;
+  border-radius: 5px;
+}
+.filter_option_button {
+  padding: 11px 36px 8px 36px;
+  border-radius: 5px;
+  margin: auto;
+  background: #cea;
+  display: inline;
+}
+.card-title{
+  padding: 9px;
+}
+.card_values{
+  color: #669;
+  padding: 9px;
+}
+
+.bold_text{
+  font-weight: bold;
+}
+.selected{
+  background: #7a1 !important;
+}
+
+main {
+  background: #f2f2f2;
+  font-size: 16px;
+}
+h2{
+  padding: 0 0 0 1.5%;
+  margin: 0;
+}
+
+@media only screen and (min-width: 700px) {
+  .card {
+    margin: 5px;
+    background: white;
+    border-radius: 5px;
+  }
+  .card-section {
+    width: 70%;
+    display: grid;
+    margin-top: 0;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70%;
+
+  }
+  .filter-section {
+    width: 28%;
+    margin: 0px auto 0px auto;
+  }
+  main {
+    background: #f2f2f2;
+    font-size: 16px;
+  }
+  .container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .filter_option_button {
+    padding: 4px 8px 4px 8px;
+    border-radius: 5px;
+    margin: auto;
+    background: #cea;
+    display: inline;
+  }
+  .filter_option {
+    text-align: center;
+    padding: 14px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .card {
+    display: inline-block;
+    margin: 5px;
+    background: white;
+    border-radius: 5px;
+  }
+  .card-section {
+    width: 80%;
+    display: grid;
+    margin-top: 0;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 70%;
+
+  }
+  .filter-section {
+    width: 18%;
+    margin: 0px auto 0px auto;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  main {
+    background: #f2f2f2;
+    font-size: 16px;
+    width: 1440px;
+    margin: auto;
+  }
+  .container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+
+/*# sourceMappingURL=main.css.map*/
