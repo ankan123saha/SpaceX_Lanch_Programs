@@ -34,7 +34,7 @@ app.get("*", (req, res, next) => {
       <!DOCTYPE html>
       <html>
         <head>
-          <title>W Combinator</title>
+          <title>SpaceX Launch Projects</title>
           <link rel="icon" href="data:,">
           <meta content="width=device-width, initial-scale=1" name="viewport" />
           <link rel="stylesheet" href="/css/main.css">

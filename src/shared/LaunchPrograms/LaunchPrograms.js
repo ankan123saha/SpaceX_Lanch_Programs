@@ -92,7 +92,6 @@ class LaunchPrograms extends Component {
 
     const { launchData } = this.state;
     return (
-      <React.Fragment>
       <main>
       <h2>SpaceX Launch Programs</h2>
       <section className="container">
@@ -168,8 +167,11 @@ class LaunchPrograms extends Component {
           })}
         </section>
         </section>
+        <div className="footer">
+        <span><strong>Developed by:</strong></span>
+        <span>Ankan Saha</span>
+          </div>
       </main>
-      </React.Fragment>
     );
   }
 }
