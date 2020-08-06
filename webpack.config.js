@@ -1,6 +1,7 @@
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const autoprefixer = require("autoprefixer");
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const browserConfig = {
   entry: "./src/browser/index.js",
@@ -50,7 +51,14 @@ const browserConfig = {
       banner: "__isBrowser__ = true;",
       raw: true,
       include: /\.js$/
-    })
+    }),
+    new CompressionPlugin({
+      filename: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.(js|css|html|svg)$/,
+      threshold: 8192,
+      minRatio: 0.8
+      })
   ]
 };
 
@@ -95,7 +103,14 @@ const serverConfig = {
       banner: "__isBrowser__ = false;",
       raw: true,
       include: /\.js$/
-    })
+    }),
+    new CompressionPlugin({
+      filename: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.(js|css|html|svg)$/,
+      threshold: 8192,
+      minRatio: 0.8
+      })
   ]
 };
 

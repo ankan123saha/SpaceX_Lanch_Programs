@@ -35,9 +35,10 @@ app.get("*", (req, res, next) => {
       <html>
         <head>
           <title>W Combinator</title>
+          <link rel="icon" href="data:,">
           <meta content="width=device-width, initial-scale=1" name="viewport" />
           <link rel="stylesheet" href="/css/main.css">
-          <script src="/bundle.js" defer></script>
+          <script src="/bundle.js.gz" defer></script>
           <script>window.__initialData__ = ${serialize(initialData)}</script>
         </head>
 

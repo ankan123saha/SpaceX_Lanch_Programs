@@ -2,7 +2,7 @@
   "name": "spacex-launch-programs",
   "version": "0.1.0",
   "description": "",
-  "main": "server.js",
+  "main": "server.js.gz",
   "scripts": {
     "start-dev": "NODE_ENV=development webpack -p & NODE_ENV=development nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,6 +27,7 @@
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
+    "compression-webpack-plugin": "^1.1.8",
     "babel-preset-react-app": "^3.0.1",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",

@@ -16,8 +16,7 @@ class LaunchPrograms extends Component {
       initialData = props.staticContext.initialData;
     }
     this.state = {
-      launchData: initialData
-      
+      launchData: initialData,
       selectedYearOption: "",
       selectedLaunchSuccessFilter: { value: false, isSelected: false },
       selectedLandingSuccessFilter: { value: false, isSelected: false }
@@ -143,7 +142,7 @@ class LaunchPrograms extends Component {
                 <CardBody>
                   <CardTitle className="card_values">{item.mission_name + " #" + item.flight_number}</CardTitle>
                   <div className="card_text">
-                    <div className="bold_text">Mission Ids:</div>
+                    <strong>Mission Ids:</strong>
                     <ul>
                       {item.mission_id.map((item, index) => {
                         return <li key={index}>{item}</li>
@@ -151,15 +150,15 @@ class LaunchPrograms extends Component {
                     </ul>
                   </div>
                   <div className="card_text">
-                    <span className="bold_text">Launch Year:</span>
+                    <strong>Launch Year:</strong>
                     <span  className="card_values">{item.launch_year}</span>
                   </div>
                   <div className="card_text">
-                    <span className="bold_text">Successful Launch:</span>
+                    <span><strong>Successful Launch:</strong></span>
                     <span  className="card_values">{item.launch_success ? "true" : "false"}</span>
                   </div>
                   <div className="card_text">
-                    <span className="bold_text">Successful Landing:</span>
+                    <span><strong>Successful Landing:</strong></span>
                     <span  className="card_values">{item.launch_landing ? "true" : "false"}</span>
                   </div>
 
