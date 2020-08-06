@@ -39,10 +39,6 @@ class LaunchPrograms extends Component {
   }
 
 
-
-
-
-
   serialize = obj => Object.keys(obj).map(key => `${key}=${encodeURIComponent(obj[key])}`).join('&')
 
   changeUrl = () => {
@@ -118,7 +114,7 @@ class LaunchPrograms extends Component {
               <div className="year_list">
                 {this.state.yearsFilterOptions.map((item, index) => {
                   return (
-                    <div className="filter_option">
+                    <div key={index} className="filter_option">
                       <div onClick={() => { this.handleClickOnYear(item) }} className={(this.state.selectedYearOption==item)?"filter_option_button selected":"filter_option_button"}>{item}</div>
                     </div>
                   )

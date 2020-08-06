@@ -1,3 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 15px;
+  font-family: sans-serif;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -8,7 +17,7 @@ img {
   background: #f2f2f2;
   margin-top: 7%;
 }
-.card_text{
+.card_text {
   padding: 8px;
 }
 .filter-section {
@@ -18,10 +27,12 @@ img {
 .filter-section .card {
   width: 98%;
 }
+
 ul {
   margin: 0;
   color: #669;
 }
+
 .year_list {
   display: grid;
   grid-template-columns: auto auto;
@@ -57,18 +68,18 @@ ul {
   background: #cea;
   display: inline;
 }
-.card-title{
+.card-title {
   padding: 9px;
 }
-.card_values{
+.card_values {
   color: #669;
   padding: 9px;
 }
 
-.bold_text{
+.bold_text {
   font-weight: bold;
 }
-.selected{
+.selected {
   background: #7a1 !important;
 }
 
@@ -76,7 +87,7 @@ main {
   background: #f2f2f2;
   font-size: 16px;
 }
-h2{
+h2 {
   padding: 0 0 0 1.5%;
   margin: 0;
 }
@@ -93,7 +104,6 @@ h2{
     margin-top: 0;
     grid-template-columns: 50% 50%;
     grid-template-rows: 70%;
-
   }
   .filter-section {
     width: 28%;
@@ -103,7 +113,7 @@ h2{
     background: #f2f2f2;
     font-size: 16px;
   }
-  .container{
+  .container {
     display: flex;
   }
   .filter_option_button {
@@ -133,7 +143,6 @@ h2{
     margin-top: 0;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 70%;
-
   }
   .filter-section {
     width: 18%;
@@ -148,8 +157,7 @@ h2{
     width: 1440px;
     margin: auto;
   }
-  .container{
+  .container {
     display: flex;
   }
 }
-

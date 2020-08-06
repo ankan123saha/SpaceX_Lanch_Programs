@@ -1,4 +1,4 @@
-import LaunchPrograms from "./LaunchPrograms/LaunchPrograms.";
+import LaunchPrograms from "./LaunchPrograms/LaunchPrograms";
 
 const routes = [
   {
