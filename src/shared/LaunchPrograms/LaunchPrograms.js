@@ -16,10 +16,8 @@ class LaunchPrograms extends Component {
       initialData = props.staticContext.initialData;
     }
     this.state = {
-      launchData: initialData,
-      yearsFilterOptions: ['2006', '2007', '2008', '2009', '2010',
-        '2011', '2012', '2013', '2014', '2015', '2016',
-        '2017', '2018', '2019', '2020'],
+      launchData: initialData
+      
       selectedYearOption: "",
       selectedLaunchSuccessFilter: { value: false, isSelected: false },
       selectedLandingSuccessFilter: { value: false, isSelected: false }
@@ -42,22 +40,16 @@ class LaunchPrograms extends Component {
   serialize = obj => Object.keys(obj).map(key => `${key}=${encodeURIComponent(obj[key])}`).join('&')
 
   changeUrl = () => {
-
     var params = {}
     if (this.state.selectedLaunchSuccessFilter.isSelected) {
       params.launch_success = this.state.selectedLaunchSuccessFilter.value
     }
-
     if (this.state.selectedLandingSuccessFilter.isSelected) {
       params.land_success = this.state.selectedLandingSuccessFilter.value
-
     }
-
     if (this.state.selectedYearOption.length > 0) {
       params.launch_year = this.state.selectedYearOption
-
     }
-
 
     this.props.history.push({
       pathname: `${this.props.match.url}filter`,
@@ -79,7 +71,6 @@ class LaunchPrograms extends Component {
 
 
   handleClickOnLaunchSuccessFilter = (value) => {
-
     var selectedLaunchSuccessFilter = Object.assign({}, this.state.selectedLaunchSuccessFilter)
     selectedLaunchSuccessFilter.value = value
     selectedLaunchSuccessFilter.isSelected = true
@@ -98,6 +89,7 @@ class LaunchPrograms extends Component {
 
 
   render() {
+    const yearsFilterOptions= ['2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016','2017', '2018', '2019', '2020']
 
     const { launchData } = this.state;
     return (
@@ -112,7 +104,7 @@ class LaunchPrograms extends Component {
             <CardBody>
               <div className="filter_title">Launch Year</div>
               <div className="year_list">
-                {this.state.yearsFilterOptions.map((item, index) => {
+                {yearsFilterOptions.map((item, index) => {
                   return (
                     <div key={index} className="filter_option">
                       <div onClick={() => { this.handleClickOnYear(item) }} className={(this.state.selectedYearOption==item)?"filter_option_button selected":"filter_option_button"}>{item}</div>
@@ -147,7 +139,7 @@ class LaunchPrograms extends Component {
           {launchData.map((item) => {
             return (
               <Card key={item.flight_number}>
-                <CardImg top src={item.links.mission_patch_small} alt="Card image cap" />
+                <CardImg top src={item.links.mission_patch_small} alt="mission patch" />
                 <CardBody>
                   <CardTitle className="card_values">{item.mission_name + " #" + item.flight_number}</CardTitle>
                   <div className="card_text">
